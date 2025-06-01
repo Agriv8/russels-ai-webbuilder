@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "main": "hero-bg-main.jpg",
+    "alternatives": [
+      "hero-bg-alt1.jpg",
+      "hero-bg-alt2.jpg"
+    ]
+  },
+  "ai_technology": {
+    "brain": "ai-brain.jpg",
+    "network": "ai-network.jpg",
+    "robot": "ai-robot.jpg"
+  },
+  "dashboards": {
+    "dark": "dashboard-dark.jpg",
+    "analytics": "analytics-chart.jpg",
+    "visualization": "data-visualization.jpg"
+  },
+  "websites": {
+    "modern": "modern-website.jpg",
+    "responsive": "responsive-design.jpg",
+    "code": "code-screen.jpg"
+  },
+  "business": {
+    "ceo": "professional-headshot.jpg",
+    "team": "team-meeting.jpg",
+    "growth": "success-growth.jpg"
+  },
+  "logos": {
+    "note": "Tech company logos should be downloaded from official sources",
+    "sources": {
+      "google": "https://about.google/brand-resource-center/",
+      "microsoft": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+      "meta": "https://about.meta.com/brand/resources/",
+      "amazon": "https://press.aboutamazon.com/logos-imagery",
+      "simpleicons": "https://simpleicons.org/"
+    }
+  }
+}

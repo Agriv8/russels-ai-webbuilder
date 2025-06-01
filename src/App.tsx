@@ -16,6 +16,7 @@ import { useState, useEffect } from 'react'
 function App() {
   const [showExitPopup, setShowExitPopup] = useState(false)
   const [timeLeft, setTimeLeft] = useState({ hours: 23, minutes: 59, seconds: 59 })
+  const [notification, setNotification] = useState({ show: false, message: '' })
 
   // Countdown timer
   useEffect(() => {
@@ -45,8 +46,56 @@ function App() {
     return () => document.removeEventListener('mouseleave', handleMouseLeave)
   }, [showExitPopup])
 
+  // Social proof notifications
+  useEffect(() => {
+    const messages = [
+      "John from New York just started their AI website build",
+      "Sarah's website generated 47 leads in the first week",
+      "TechCorp increased conversions by 312%",
+      "Mike from California just booked a consultation",
+      "Emma's AI website is now live and converting"
+    ]
+    
+    const showRandomNotification = () => {
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)]
+      setNotification({ show: true, message: randomMessage })
+      
+      setTimeout(() => {
+        setNotification({ show: false, message: '' })
+      }, 5000)
+    }
+    
+    // Show first notification after 3 seconds
+    const firstTimer = setTimeout(showRandomNotification, 3000)
+    
+    // Then show notifications every 15-30 seconds
+    const interval = setInterval(() => {
+      if (!showExitPopup) {
+        showRandomNotification()
+      }
+    }, Math.random() * 15000 + 15000)
+    
+    return () => {
+      clearTimeout(firstTimer)
+      clearInterval(interval)
+    }
+  }, [showExitPopup])
+
   return (
     <div className="min-h-screen bg-dark overflow-x-hidden">
+      {/* Social Proof Notification */}
+      <motion.div
+        initial={{ x: -300, opacity: 0 }}
+        animate={{ x: notification.show ? 0 : -300, opacity: notification.show ? 1 : 0 }}
+        transition={{ type: "spring", damping: 20 }}
+        className="fixed bottom-24 left-8 z-40 bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700 max-w-sm"
+      >
+        <div className="flex items-center gap-3">
+          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+          <p className="text-sm text-gray-300">{notification.message}</p>
+        </div>
+      </motion.div>
+
       {/* Floating CTA */}
       <motion.div
         initial={{ y: 100, opacity: 0 }}
@@ -93,7 +142,15 @@ function App() {
       )}
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4">
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/hero-bg-main.jpg" 
+            alt="AI Technology Background" 
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/90 to-dark" />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-neonBlue/10 to-transparent" />
         
         <div className="container mx-auto text-center relative z-10 max-w-6xl">
@@ -170,7 +227,7 @@ function App() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 px-4" id="problem">
+      <section className="py-20 px-4 bg-gray-900/30" id="problem">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -209,7 +266,7 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-red-500/50 transition-colors"
+                className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-red-500/50 transition-colors"
               >
                 <div className="mb-4">{item.icon}</div>
                 <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
@@ -240,7 +297,7 @@ function App() {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 px-4 bg-gray-900/50" id="solution">
+      <section className="py-20 px-4 bg-gray-800/20" id="solution">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -302,7 +359,12 @@ function App() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="text-center">
                 <h4 className="text-xl font-bold text-red-500 mb-4">Old Website</h4>
-                <ul className="text-left space-y-2 text-gray-400">
+                <img 
+                  src="/images/before-website.svg" 
+                  alt="Old Website Design" 
+                  className="w-full max-w-sm mx-auto mb-4 rounded-lg border border-red-500/30"
+                />
+                <ul className="text-left space-y-2 text-gray-400 max-w-xs mx-auto">
                   <li>• 0.2% conversion rate</li>
                   <li>• 10 leads per month</li>
                   <li>• $2,500 revenue</li>
@@ -311,7 +373,12 @@ function App() {
               </div>
               <div className="text-center">
                 <h4 className="text-xl font-bold text-green-500 mb-4">AI Website</h4>
-                <ul className="text-left space-y-2 text-gray-300">
+                <img 
+                  src="/images/after-website.svg" 
+                  alt="AI-Powered Website" 
+                  className="w-full max-w-sm mx-auto mb-4 rounded-lg border border-green-500/30"
+                />
+                <ul className="text-left space-y-2 text-gray-300 max-w-xs mx-auto">
                   <li>• 3.1% conversion rate</li>
                   <li>• 155 leads per month</li>
                   <li>• $38,750 revenue</li>
@@ -373,7 +440,7 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gray-900 p-6 rounded-xl border border-gray-800"
+                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700"
               >
                 <div className="flex items-start gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -399,12 +466,12 @@ function App() {
             className="text-center"
           >
             <p className="text-gray-400 mb-8">Trusted by 500+ businesses worldwide</p>
-            <div className="flex flex-wrap justify-center gap-8 opacity-50">
-              {['TechCorp', 'GrowthLab', 'SalesForce', 'MarketPro', 'CloudBase'].map((company) => (
-                <div key={company} className="text-2xl font-bold text-gray-600">
-                  {company}
-                </div>
-              ))}
+            <div className="flex flex-wrap justify-center items-center gap-12">
+              <img src="/images/google-logo.svg" alt="Google" className="h-10 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/images/microsoft-logo.svg" alt="Microsoft" className="h-10 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/images/meta-logo.svg" alt="Meta" className="h-10 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/images/amazon-logo.svg" alt="Amazon" className="h-10 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/images/openai-logo.svg" alt="OpenAI" className="h-10 opacity-60 hover:opacity-100 transition-opacity" />
             </div>
           </motion.div>
         </div>
@@ -616,6 +683,38 @@ function App() {
                 <span className="font-bold text-neonBlue">Zero Risk:</span> Try it for 30 days. 
                 If you don't see results, get 100% of your money back. We even let you keep the website.
               </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              A Message From <span className="gradient-text">Our Founder</span>
+            </h2>
+            <div className="flex flex-col md:flex-row items-center gap-8 bg-gray-800/30 p-8 rounded-xl border border-gray-700">
+              <img 
+                src="/images/ceo-placeholder.jpg" 
+                alt="Russel, Founder & CEO"
+                className="w-32 h-32 rounded-full object-cover border-4 border-neonBlue/50"
+              />
+              <div className="text-left">
+                <p className="text-lg text-gray-300 mb-4">
+                  "I've built websites for 15 years. The old way is dead. AI isn't coming - it's here. 
+                  And if you're not using it, you're already behind. We've cracked the code on AI websites 
+                  that actually convert. Let us show you."
+                </p>
+                <p className="font-bold text-xl">Russel</p>
+                <p className="text-gray-400">Founder & CEO</p>
+              </div>
             </div>
           </motion.div>
         </div>
