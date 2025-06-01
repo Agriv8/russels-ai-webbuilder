@@ -29,7 +29,7 @@
 ### 2. Exit-Intent Popup
 **What it does:** Captures leaving visitors with a lead magnet
 - Triggers when mouse moves to top of screen (leaving gesture)
-- Offers FREE guide: "7 AI Website Secrets That Generated $50M in Revenue"
+- Offers FREE guide: "7 AI Website Secrets That Generated £50M in Revenue"
 - Email capture for lead generation
 
 **Why it works:**
@@ -80,7 +80,7 @@
 ### 3. Trust Indicators
 - **Tech company logos** - Association with successful brands
 - **5-star ratings** - Universal trust symbol
-- **Specific numbers** - "500+ websites", "$50M revenue"
+- **Specific numbers** - "500+ websites", "£50M revenue"
 - **Founder photo & message** - Human connection
 - **Money-back guarantee** - Risk reversal
 
@@ -101,7 +101,7 @@
 
 ### 2. Progressive Disclosure
 1. **Hook** - Stop losing money
-2. **Credibility** - 500+ sites, $50M revenue
+2. **Credibility** - 500+ sites, £50M revenue
 3. **Problem** - Current website issues
 4. **Solution** - AI-powered features
 5. **Proof** - Testimonials & case studies

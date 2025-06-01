@@ -127,7 +127,7 @@ function App() {
             </button>
             <h3 className="text-2xl font-bold mb-4">Wait! Don't Leave Empty-Handed</h3>
             <p className="text-gray-300 mb-6">
-              Get our FREE guide: "7 AI Website Secrets That Generated $50M in Revenue"
+              Get our FREE guide: "7 AI Website Secrets That Generated £50M in Revenue"
             </p>
             <input
               type="email"
@@ -181,7 +181,7 @@ function App() {
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
             We've Built <span className="text-neonBlue font-bold">500+ AI Websites</span> That Generated{' '}
-            <span className="text-neonPurple font-bold">$50M+ in Revenue</span>
+            <span className="text-neonPurple font-bold">£50M+ in Revenue</span>
           </motion.p>
 
           <motion.div
@@ -279,17 +279,23 @@ function App() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-16 bg-gradient-to-r from-red-500/20 to-orange-500/20 p-8 rounded-xl border border-red-500/50"
+            className="mt-16 bg-red-950/30 p-8 rounded-xl border-2 border-red-500 shadow-[0_0_30px_rgba(255,0,0,0.3)]"
           >
-            <h3 className="text-2xl font-bold mb-4 text-center">
-              Lost Revenue Calculator
-            </h3>
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <AlertCircle className="text-red-500" size={32} />
+              <h3 className="text-2xl font-bold text-center">
+                Lost Revenue Calculator
+              </h3>
+            </div>
             <div className="text-center">
-              <p className="text-3xl font-bold gradient-text mb-2">
-                You're losing $12,500/month
+              <p className="text-4xl font-bold text-red-400 mb-2">
+                You're losing £12,500/month
               </p>
-              <p className="text-gray-400">
-                Based on 5,000 monthly visitors with 0.2% conversion rate vs 3% AI-optimized rate
+              <p className="text-lg text-gray-300">
+                Based on 5,000 monthly visitors with 0.2% conversion rate vs 3% AI-optimised rate
+              </p>
+              <p className="text-sm text-red-400 mt-4 font-semibold">
+                That's £150,000 per year going to your competitors
               </p>
             </div>
           </motion.div>
@@ -367,7 +373,7 @@ function App() {
                 <ul className="text-left space-y-2 text-gray-400 max-w-xs mx-auto">
                   <li>• 0.2% conversion rate</li>
                   <li>• 10 leads per month</li>
-                  <li>• $2,500 revenue</li>
+                  <li>• £2,500 revenue</li>
                   <li>• Manual everything</li>
                 </ul>
               </div>
@@ -381,7 +387,7 @@ function App() {
                 <ul className="text-left space-y-2 text-gray-300 max-w-xs mx-auto">
                   <li>• 3.1% conversion rate</li>
                   <li>• 155 leads per month</li>
-                  <li>• $38,750 revenue</li>
+                  <li>• £38,750 revenue</li>
                   <li>• Full automation</li>
                 </ul>
               </div>
@@ -418,7 +424,7 @@ function App() {
               {
                 name: "Mike Chen",
                 company: "Growth Marketing Co",
-                result: "$150K in new revenue",
+                result: "£150K in new revenue",
                 testimonial: "They built exactly what we needed. The AI chat alone books 50+ calls per month on autopilot."
               },
               {
@@ -570,7 +576,7 @@ function App() {
             {[
               {
                 name: "Starter",
-                price: "$2,997",
+                price: "£2,997",
                 features: [
                   "5-page AI website",
                   "Basic personalisation",
@@ -583,8 +589,8 @@ function App() {
               },
               {
                 name: "Growth",
-                price: "$5,997",
-                oldPrice: "$7,997",
+                price: "£5,997",
+                oldPrice: "£7,997",
                 features: [
                   "10-page AI website",
                   "Advanced personalisation",
@@ -598,7 +604,7 @@ function App() {
               },
               {
                 name: "Scale",
-                price: "$9,997",
+                price: "£9,997",
                 features: [
                   "Unlimited pages",
                   "Full AI automation",
