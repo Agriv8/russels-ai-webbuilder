@@ -316,7 +316,7 @@ function App() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
               {
-                title: "AI-Powered Personalization",
+                title: "AI-Powered Personalisation",
                 description: "Shows exactly what each visitor wants to see",
                 stat: "3x Higher Engagement"
               },
@@ -431,7 +431,7 @@ function App() {
                 name: "David Thompson",
                 company: "SaaS Startup",
                 result: "Cut CAC by 70%",
-                testimonial: "The personalization is insane. Each visitor sees exactly what they need to see."
+                testimonial: "The personalisation is insane. Each visitor sees exactly what they need to see."
               }
             ].map((item, index) => (
               <motion.div
@@ -503,16 +503,16 @@ function App() {
                 {
                   day: "Day 1-2",
                   title: "AI Strategy Session",
-                  description: "We analyze your business and design the perfect conversion system"
+                  description: "We analyse your business and design the perfect conversion system"
                 },
                 {
                   day: "Day 3-4",
                   title: "Build & Train AI",
-                  description: "Create your website with AI personalization and smart funnels"
+                  description: "Create your website with AI personalisation and smart funnels"
                 },
                 {
                   day: "Day 5-6",
-                  title: "Test & Optimize",
+                  title: "Test & Optimise",
                   description: "Fine-tune everything for maximum conversions"
                 },
                 {
@@ -573,7 +573,7 @@ function App() {
                 price: "$2,997",
                 features: [
                   "5-page AI website",
-                  "Basic personalization",
+                  "Basic personalisation",
                   "Lead capture forms",
                   "Mobile responsive",
                   "30-day support"
@@ -587,11 +587,11 @@ function App() {
                 oldPrice: "$7,997",
                 features: [
                   "10-page AI website",
-                  "Advanced personalization",
+                  "Advanced personalisation",
                   "AI chat assistant",
                   "A/B testing",
                   "90-day support",
-                  "Conversion optimization"
+                  "Conversion optimisation"
                 ],
                 cta: "Most Popular",
                 popular: true
@@ -604,7 +604,7 @@ function App() {
                   "Full AI automation",
                   "Custom integrations",
                   "Priority support",
-                  "Weekly optimization",
+                  "Weekly optimisation",
                   "Dedicated success manager"
                 ],
                 cta: "Scale Fast",

@@ -70,7 +70,7 @@
 ```
 **Psychology:** Creates sophisticated, high-tech atmosphere while maintaining readability
 
-### 2. Color Psychology
+### 2. Colour Psychology
 - **Dark Background (#1A1A1A)** - Premium, sophisticated, tech-focused
 - **Neon Blue (#00D9FF)** - Innovation, trust, technology
 - **Neon Purple (#9945FF)** - Creativity, premium, transformation
@@ -91,7 +91,7 @@
 4. **Social proof** - Throughout the page
 5. **Trust badges** - Supporting elements
 
-## 📊 Conversion Rate Optimization (CRO) Techniques
+## 📊 Conversion Rate Optimisation (CRO) Techniques
 
 ### 1. Alex Hormozi Copy Style
 - **Direct, no fluff** - "Your website looks pretty but makes you broke"
@@ -117,11 +117,11 @@
 - **Progress indicators** - Visual timeline
 - **Button hover states** - Encourages clicking
 
-### 4. Mobile Optimization
+### 4. Mobile Optimisation
 - **Thumb-friendly CTAs** - Easy mobile tapping
 - **Responsive text sizing** - Readable on all devices
 - **Stacked layouts** - Natural mobile flow
-- **Touch-optimized spacing** - No accidental taps
+- **Touch-optimised spacing** - No accidental taps
 
 ## 🔧 Technical Implementation
 
@@ -132,17 +132,17 @@ const [timeLeft, setTimeLeft] = useState({ hours: 23, minutes: 59, seconds: 59 }
 const [notification, setNotification] = useState({ show: false, message: '' })
 ```
 
-### Performance Optimizations
+### Performance Optimisations
 - **Lazy loading** - Images load as needed
 - **Debounced animations** - Smooth performance
-- **Optimized re-renders** - React best practices
+- **Optimised re-renders** - React best practices
 - **Code splitting** - Could add for sections
 
 ## 💡 Future Enhancement Ideas
 
 1. **A/B Testing**
    - Different headlines
-   - CTA button colors
+   - CTA button colours
    - Notification messages
    - Pricing structures
 
@@ -152,7 +152,7 @@ const [notification, setNotification] = useState({ show: false, message: '' })
    - Video testimonials
    - Interactive ROI calculator
 
-3. **Personalization**
+3. **Personalisation**
    - Industry-specific messaging
    - Geo-targeted content
    - Return visitor recognition

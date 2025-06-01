@@ -5,7 +5,7 @@ High-converting landing page for AI website building services. Built with React,
 ## 🚀 Features
 
 - **Conversion-focused design** with Alex Hormozi-style copywriting
-- **AI-powered personalization** messaging throughout
+- **AI-powered personalisation** messaging throughout
 - **Dark mode UI** with neon blue and purple accents
 - **Smooth animations** using Framer Motion
 - **Mobile-responsive** design

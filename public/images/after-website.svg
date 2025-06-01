@@ -33,7 +33,7 @@
         <circle cx="30" cy="30" r="25" fill="#00D9FF" opacity="0.2"/>
         <text x="30" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#00D9FF">🚀</text>
         <text x="70" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">Lightning Fast</text>
-        <text x="70" y="45" font-family="Arial, sans-serif" font-size="14" fill="#999">Optimized performance</text>
+        <text x="70" y="45" font-family="Arial, sans-serif" font-size="14" fill="#999">Optimised performance</text>
     </g>
     
     <g transform="translate(300, 380)">
